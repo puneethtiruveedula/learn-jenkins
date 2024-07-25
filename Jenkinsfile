@@ -46,6 +46,17 @@ pipeline {
                 echo 'triggered test again'
             }
         }    
-}
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+        success{
+            echo 'I will when pipeline is success'
+        }
+        failure{
+            echo 'I will when pipeline is failure'
+        }
+    }
 }
     
